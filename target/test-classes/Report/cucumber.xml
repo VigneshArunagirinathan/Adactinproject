@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="65.425836">
+<testcase classname="purchase the prouct" name="User want to purchase product from fishpond website" time="0.044307">
+<system-out><![CDATA[Given User is on fishpond page..............................................passed
+When User clicks sigin......................................................passed
+And User enters "<Username>" and "sivaamuthan" and clicks sigin button......passed
+And user enters "Story books" and click search..............................passed
+And User select the product and add the product to cart.....................passed
+And user clicks the checkout and make payment...............................passed
+And user clicks the confirm order...........................................passed
+Then User navigates to payment page.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Order id" name="To booking room and enter order Id" time="47.995224">
+<system-out><![CDATA[Given user is on Adactin page...............................................passed
+When user enters "vignesharun" and "sivaamuthan" and clicks the login button.passed
+And user enters "Melbourne","Hotel Creek","Deluxe","2 - Two","23/12/2019","2/12/2019","2 - Two","2 - Two".passed
+And select the hotel and click the continue button..........................passed
+And user enter the "vignesh","vicky","ertyuiodfghjkcvbnm","9876543212345677","VISA","June","2022","943" click the book now button.passed
+Then verify the url.........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verify fb details" name="Verify logindetails with" time="17.386305">
+<failure message="java.lang.IndexOutOfBoundsException: Index: 0, Size: 0&#13;&#10;&#9;at java.util.ArrayList.rangeCheck(Unknown Source)&#13;&#10;&#9;at java.util.ArrayList.get(Unknown Source)&#13;&#10;&#9;at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)&#13;&#10;&#9;at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)&#13;&#10;&#9;at java.lang.reflect.Method.invoke(Unknown Source)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)&#13;&#10;&#9;at com.sun.proxy.$Proxy16.get(Unknown Source)&#13;&#10;&#9;at com.stepdefinition.Stepdefinition.user_enters(Stepdefinition.java:50)&#13;&#10;&#9;at ✽.user enters &quot;&lt;location&gt;&quot;,&quot;&lt;hotel&gt;&quot;,&quot;&lt;roomtype&gt;&quot;,&quot;&lt;number of rooms&gt;&quot;,&quot;&lt;check in date&gt;&quot;,&quot;&lt;check out date&gt;&quot;,&quot;&lt;adults per room&gt;&quot;,&quot;&lt;child per room&gt;&quot;(file:src/test/resources/feature/tag.feature:7)&#13;&#10;"><![CDATA[Given user is on Adactin page...............................................passed
+When user enters "<username>" and "<password>" and clicks the login button..passed
+And user enters "<location>","<hotel>","<roomtype>","<number of rooms>","<check in date>","<check out date>","<adults per room>","<child per room>".failed
+And select the hotel and click the continue button..........................skipped
+And user enter the "<firstname>","<lastname>","<address>","<credit card no>","<credit card type>","<expired date>","<expired year>","<cvv no>" click the book now button.skipped
+Then verify the url.........................................................skipped
+
+StackTrace:
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+	at com.sun.proxy.$Proxy16.get(Unknown Source)
+	at com.stepdefinition.Stepdefinition.user_enters(Stepdefinition.java:50)
+	at ✽.user enters "<location>","<hotel>","<roomtype>","<number of rooms>","<check in date>","<check out date>","<adults per room>","<child per room>"(file:src/test/resources/feature/tag.feature:7)
+]]></failure>
+</testcase>
+</testsuite>
